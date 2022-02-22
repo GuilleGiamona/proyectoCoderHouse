@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banda Musical</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="grid-contacto">
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html"><img class="nav__logo" src="../images/logo.png" alt="logo"></a>
+            <ul class="nav__links">
+                <li class="nav__item">
+                    <a class="nav__link" href="informacion.html">Información</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="discos.html">Discos</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="tours.html">Próximos Tours</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h1 class="main__title">Formulario de contacto</h1>
+        <section class="main__section main__section--form grid-formularios">
+            <form class="section__form">
+                <div class="form__area">
+                    <label class="form__text" for="nombre">Nombre</label>
+                    <input class="form__input" type="text" name="nombre" placeholder="" required>
+                </div>
+                <div class="form__area">
+                    <label class="form__text" for="apellido">Apellido</label>
+                    <input class="form__input" type="text" placeholder="">
+                </div>
+                <div class="form__area">
+                    <label class="form__text" for="mail">E-Mail</label>
+                    <input class="form__input" type="email" placeholder="">
+                </div>
+                <div class="form__area">
+                    <label class="form__text" for="datos">Consulta</label>
+                    <textarea class="form__input" name="datos" id="" cols="20" rows="4"></textarea>
+                </div>
+                <div class="form__area">
+                    <label class="form__text" for="sexo">Sexo</label>
+                    <select class="form__select" name="sexo" id="">
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                    </select>
+                </div>
+                <div class="form__area">
+                    <label class="form__text" for="">Desea recibir informacion?</label>
+                    <input class="form__input" type="checkbox" name="" id="">
+                </div>
+                <div class="form__area">
+                    <input class="form__input" type="submit" value="Enviar">
+                    <input class="form__input" type="reset" value="Limpíar">
+                </div>
+            </form>
+        </section>
+    </main>
+    <section class="grid-aside">
+        <aside class="aside">
+            <img class="aside__img" src="../images/fondo-aside.jpg" alt="aside">
+        </aside>
+    </section>
+    <footer class="footer">
+        <div class="footer__redes">
+            <a href="https://www.instagram.com/badbunnypr/" target="_blank"><i
+                    class="fab fa-instagram footer__redes__ig"></i></a>
+            <a href="https://twitter.com/sanbenito?lang=es" target="_blank"><i
+                    class="fab fa-twitter footer__redes__tw"></i></a>
+            <a href="https://www.youtube.com/results?search_query=bad+bunny" target="_blank"><i
+                    class="fab fa-youtube footer__redes__yt"></i></a>
+            <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank"><i
+                    class="fab fa-spotify footer__redes__spotify"></i></a>
+        </div>
+        <h4 class="footer__creditos">Creditos: Guillermo Giamona 2022</h4>
+    </footer>
+</body>
+
+</html>

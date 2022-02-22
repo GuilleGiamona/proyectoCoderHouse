@@ -1,0 +1,796 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: rgb(197, 221, 231);
+}
+
+/* GRID */
+
+.grid-index {
+    display: grid;
+    grid-template-areas:
+        "encabezado"
+        "contenido"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+}
+
+.grid-contacto {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "encabezado encabezado"
+        "aside form"
+        "footer footer";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 8% auto 6%;
+    justify-content: center;
+}
+
+.grid-info {
+    display: grid;
+    grid-template-areas:
+        "encabezado"
+        "contenido"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+}
+
+.grid-discos {
+    display: grid;
+    grid-template-areas:
+        "encabezado"
+        "contenido"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+}
+
+.grid-tours {
+    display: grid;
+    grid-template-areas:
+        "encabezado"
+        "contenido"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* GRID */
+
+/* HEADER */
+
+/* NAV */
+
+.header {
+    grid-area: encabezado;
+}
+
+.nav {
+    background-color: rgb(218, 223, 247);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-left: 1.5vh;
+    margin-top: 0.5vh;
+}
+
+.nav__links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav__item {
+    font-size: large;
+}
+
+.nav__link {
+    text-decoration: none;
+    margin-right: 3vh;
+    color: blueviolet;
+}
+
+/* NAV */
+
+/* INDEX */
+
+.contenido {
+    grid-area: contenido;
+}
+
+.main__section--c {
+    display: flex;
+    background-color: rgb(197, 221, 231);
+    align-items: center;
+    justify-content: center;
+}
+
+.main__section--p {
+    display: flex;
+    height: 100vh;
+    background-image: url(../images/fondo.png);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__title {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.section__text {
+    padding-top: 15px;
+    background-color: black;
+    color: white;
+}
+
+/* INDEX */
+
+/* CARD */
+
+.card__titulo {
+    text-align: center;
+    background-color: rgb(128, 128, 128);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 25vh;
+    border: 5px solid rgb(90, 125, 124);
+    background-color: rgba(0, 0, 0, 0.24);
+    margin: 2vh;
+}
+
+.card__text {
+    background-color: black;
+    opacity: 0.5;
+}
+
+.card__p {
+    color: white;
+    text-align: center;
+}
+
+.card__body {
+    height: 21vh;
+    padding: 5px;
+}
+
+.card__img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+/* CARD */
+
+/* INFORMACION */
+
+.main__section--info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-area: contenido;
+}
+
+.section__info {
+    width: 75%;
+}
+
+.section__p {
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+}
+
+.section__contenedorImagenes {
+    display: flex;
+    flex-direction: row;
+}
+
+.section__contImg {
+    margin: 25px;
+}
+
+.section__img {
+    width: auto;
+    height: 250px;
+    border-radius: 25%;
+}
+
+/* INFORMACION */
+
+/* DISCOS */
+
+.main_section--discos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: contenido;
+}
+
+.section__article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 19%;
+}
+
+.section__title {
+    text-align: left;
+}
+
+.section__lista {
+    list-style: circle;
+    text-align: left;
+}
+
+.section__image {
+    width: 250px;
+    height: auto;
+    padding-top: 10px;
+}
+
+/* DISCOS */
+
+/* TOURS */
+
+.main__section--table {
+    display: flex;
+    background-image: url(../images/fondo.png);
+    background-repeat: repeat;
+    justify-content: center;
+    align-items: center;
+    grid-area: contenido;
+}
+
+.section__table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 4px solid gray;
+    background-color: rgb(197, 221, 231);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.table__title {
+    width: 25%;
+    padding: 10px;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.table__text {
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* .table__tr:nth-child(odd) {
+    background-color: #db95ca;
+}
+
+.table__tr:nth-child(even) {
+    background-color:  rgb(197, 221, 231);
+} */
+
+/* TOURS */
+
+/* CONTACTO */
+
+.main__section--form {
+    background-color: rgb(97, 97, 97);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.grid-formularios {
+    grid-area: form;
+}
+
+.grid-aside {
+    grid-area: aside;
+}
+
+.form__area {
+    padding: 5%;
+    margin: 1vh;
+    background-color: rgba(51, 51, 51, 0.508);
+    border-radius: 10%;
+}
+
+.form__text {
+    color: white;
+    text-decoration: underline;
+    font-size: 150%;
+    vertical-align: top;
+}
+
+.form__input {
+    color: white;
+    border-radius: 10px;
+    font-size: 150%;
+    margin-top: 3%;
+    background-color: rgb(139, 138, 138);
+}
+
+.form__select {
+    font-size: 120%;
+}
+
+.aside {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.aside__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* CONTACTO */
+
+/* FOOTER */
+
+.footer {
+    background-color: rgb(160, 193, 209);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: footer;
+}
+
+.footer__redes {
+    margin-left: 1vh;
+    font-size: 35px;
+}
+
+.footer__redes__wsp {
+    color: green;
+}
+
+.footer__redes__ig {
+    color: blueviolet;
+}
+
+.footer__redes__tw {
+    color: darkturquoise;
+}
+
+.footer__redes__yt {
+    color: red;
+}
+
+.footer__redes__spotify {
+    color: green;
+}
+
+.footer__creditos {
+    margin-right: 1vh;
+}
+
+/* LAPTOP */
+
+@media screen and (max-width: 768px) {
+
+    /* INDEX */
+
+    .grid-index {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main__section--p {
+        text-align: center;
+    }
+
+    .main__section--c {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        display: flex;
+        width: 30vh;
+    }
+
+    /* INDEX */
+
+    /* INFORMACION */
+
+    .grid-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .section__contenedorImagenes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section__info {
+        width: 100%;
+    }
+
+    .section__contImg {
+        margin: 15px;
+    }
+
+    .section__img {
+        width: auto;
+        height: 200px;
+    }
+
+    /* INFORMACION */
+
+    /* DISCOS */
+
+    .grid-discos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main_section--discos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .section__article {
+        align-items: center;
+        width: 25%;
+        margin: 20px;
+    }
+
+    .section__image {
+        width: 190px;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    /* DISCOS */
+
+    /* TOURS */
+
+    .grid-tours {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main__section--table {
+        display: flex;
+    }
+
+    .section__table {
+        width: 90%;
+    }
+
+    /* TOURS */
+
+    /* CONTACTO */
+
+    .grid-contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main__section--form {
+        height: 100%;
+    }
+
+    /* CONTACTO */
+}
+
+/* LAPTOP */
+
+/* TABLET */
+
+@media screen and (max-width: 576px) {
+
+    /* INDEX */
+
+    .grid-index {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main__section--p {
+        text-align: center;
+    }
+
+    .main__section--c {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        display: flex;
+        width: 35vh;
+    }
+
+    /* INDEX */
+
+    /* INFORMACION */
+
+    .grid-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .section__contenedorImagenes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section__info {
+        width: 95%;
+    }
+
+    .section__contImg {
+        margin: 5px;
+    }
+
+    .section__img {
+        width: auto;
+        height: 150px;
+    }
+
+    /* INFORMACION */
+
+    /* DISCOS */
+
+    .grid-discos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main_section--discos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .section__article {
+        align-items: center;
+        width: 40%;
+        margin: 20px;
+    }
+
+    .section__image {
+        width: 200px;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    /* DISCOS */
+
+    /* TOURS */
+
+    .grid-tours {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main__section--table {
+        display: flex;
+    }
+
+    .section__table {
+        width: 90%;
+    }
+
+    /* TOURS */
+
+    /* CONTACTO */
+
+    .grid-contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main__section--form {
+        height: auto;
+    }
+
+    /* CONTACTO */
+
+}
+
+/* TABLET */
+
+/* MOBILE */
+
+@media screen and (max-width: 480px) {
+
+    .nav {
+        height: 20vh;
+    }
+
+    .nav__links {
+        flex-direction: column;
+        list-style: none;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin-top: 5px;
+    }
+
+    .footer {
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* INDEX */
+
+    .grid-index {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    /* .contenido--none{
+        display: none;
+    } */
+
+    .contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        width: 45vh;
+    }
+
+    /* INDEX */
+
+    /* INFORMACION */
+
+    .grid-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .section__contenedorImagenes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__title--info {
+        font-size: x-large;
+    }
+
+    .section__info {
+        width: 95%;
+    }
+
+    .section__contImg {
+        margin: 5px;
+    }
+
+    .section__img {
+        width: auto;
+        height: 150px;
+    }
+
+    /* INFORMACION */
+
+    /* DISCOS */
+
+    .grid-discos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main_section--discos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section__article {
+        align-items: center;
+        width: 85%;
+    }
+
+    /* DISCOS */
+
+    /* TOURS */
+
+    .grid-tours {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main__section--table {
+        display: flex;
+    }
+
+    .section__table {
+        width: auto;
+        margin: 10px;
+    }
+
+    .table__title {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .table__text {
+        padding: 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    /* TOURS */
+
+    /* CONTACTO */
+
+    .grid-contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main__section--form {
+        height: auto;
+    }
+
+    /* CONTACTO */
+}
+
+/* MOBILE */
