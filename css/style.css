@@ -128,10 +128,13 @@ body {
     transition: all 2s;
 }
 
-.nav__link:hover {
-    background-color: rgb(109, 109, 231);
-    border-radius: 10px;
-    color: white;
+/* Para eliminar el hover en vista mobile y tablet */
+@media screen and (min-width: 576px) {
+    .nav__link:hover {
+        background-color: rgb(109, 109, 231);
+        border-radius: 10px;
+        color: white;
+    }
 }
 
 /* NAV */
@@ -187,9 +190,12 @@ body {
     transition: all 1s;
 }
 
-.card:hover {
-    transform: scale(1.1);
-    box-shadow: 5px 5px 10px rgb(121, 172, 169);
+/* Para eliminar el hover en vista mobile y tablet */
+@media screen and (min-width: 576px) {
+    .card:hover {
+        transform: scale(1.1);
+        box-shadow: 5px 5px 10px rgb(121, 172, 169);
+    }
 }
 
 .card__img {
@@ -635,6 +641,25 @@ body {
 
 @media screen and (max-width: 576px) {
 
+    .nav {
+        height: auto;
+    }
+
+    .nav__boss {
+        height: auto;
+        align-items: center;
+    }
+
+    .nav__links {
+        flex-direction: column;
+        list-style: none;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin-top: 5px;
+    }
+
     /* INDEX */
 
     .grid-index {
@@ -717,6 +742,14 @@ body {
         padding-top: 10px;
     }
 
+    .yt {
+        width: 480%;
+    }
+
+    .sp {
+        width: 532%;
+    }
+
     /* DISCOS */
 
     /* TOURS */
@@ -760,7 +793,12 @@ body {
 @media screen and (max-width: 480px) {
 
     .nav {
-        height: auto
+        height: auto;
+    }
+
+    .nav__boss {
+        height: auto;
+        align-items: center;
     }
 
     .nav__links {
@@ -854,6 +892,14 @@ body {
     .section__article {
         align-items: center;
         width: 85%;
+    }
+
+    .yt {
+        width: 400%;
+    }
+
+    .sp {
+        width: 443%;
     }
 
     /* DISCOS */
