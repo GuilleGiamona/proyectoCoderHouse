@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banda Musical</title>
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,400;1,500;1,700&display=swap"
@@ -14,12 +13,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="..//css/style.css">
 </head>
 
 <body class="grid-discos">
     <header class="header">
-        <nav class="nav">
-            <a href="../index.html"><img class="nav__logo" src="../images/logo.png" alt="logo"></a>
+        <nav class="nav__boss">
+            <a href="../index.html"><img class="nav__logo--boss" src="../images/logo.png" alt="logo"></a>
             <ul class="nav__links">
                 <li class="nav__item">
                     <a class="nav__link" href="informacion.html">Información</a>
@@ -58,7 +60,37 @@
                     <li class="section__item">Estamos bien</li>
                     <li class="section__item">Mía (junto a Drake)</li>
                 </ul>
-                <a href="https://www.youtube.com/watch?v=7rbprAR_Reg&list=PLRW7iEDD9RDQjStVF3FjOUlTmhR2d0_tU&ab_channel=BadBunny" target="_blank"><img class="section__image" src="../images/album-x100pre.jpg" alt="foto-album"></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">X 100pre</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Donde quieres escuchar el disco?</h5>
+                            </div>
+                            <div class="modal-footer btn-group" role="group" aria-label="Basic mixed styles example">
+                                <a href="https://www.youtube.com/watch?v=7rbprAR_Reg&list=PLRW7iEDD9RDQjStVF3FjOUlTmhR2d0_tU&ab_channel=BadBunny"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-danger btn-lg yt">Youtube</button></a>
+                                <a href="https://open.spotify.com/album/7CjJb2mikwAWA1V6kewFBF?si=IVvcXC0fQ4mxf6H_uIFh6w"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-success btn-lg sp">Spotify</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flechas">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                </div>
+                <img class="section__image" src="../images/album-x100pre.jpg" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" alt="foto-album">
             </article>
             <article class="section__article">
                 <h3 class="section__title">Oasis (Jun 2019)</h3>
@@ -72,7 +104,37 @@
                     <li class="section__item">Odio</li>
                     <li class="section__item">Como un bebé (con Mr Eazi)</li>
                 </ul>
-                <a href="https://www.youtube.com/watch?v=hnm3IxupbgU&list=PLPPAC_cvchxO4yy5jh4PKjxenp-p7P_xE&ab_channel=jbalvinVEVO" target="_blank"><img class="section__image" src="../images/album-oasis.jpg" alt="foto-album"></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Oasis</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Donde quieres escuchar el disco?</h5>
+                            </div>
+                            <div class="modal-footer btn-group" role="group" aria-label="Basic mixed styles example">
+                                <a href="https://www.youtube.com/watch?v=hnm3IxupbgU&list=PLPPAC_cvchxO4yy5jh4PKjxenp-p7P_xE&ab_channel=jbalvinVEVO"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-danger btn-lg yt">Youtube</button></a>
+                                <a href="https://open.spotify.com/album/6ylFfzx32ICw4L1A7YWNLN?si=UP_91APqQwyf3IxSr0ZhhQ"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-success btn-lg sp">Spotify</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flechas">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                </div>
+                <img class="section__image" src="../images/album-oasis.jpg" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal2" alt="foto-album">
             </article>
             <article class="section__article">
                 <h3 class="section__title">YHLQMDLG (Feb 2020)</h3>
@@ -96,12 +158,42 @@
                     <li class="section__item">Puesto pa' guerrial (con Myke Towers)</li>
                     <li class="section__item">P FKN R (con Kendo Kaponi and Arcángel)</li>
                     <li class="section__item">Hablamos mañana (con Duki & Pablo Chill-E)</li>
-                    <li class="section__item"><3</li>
+                    <li class="section__item"><3 </li>
                 </ul>
-                <a href="https://www.youtube.com/watch?v=Da-CIlJU8I4&list=PLRW7iEDD9RDS2irjCFJo7dkcswBaJZXGG&ab_channel=BadBunny" target="_blank"><img class="section__image" src="../images/album-yhlqmdlg.jpg" alt="foto-album"></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">YHLQMDLG</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Donde quieres escuchar el disco?</h5>
+                            </div>
+                            <div class="modal-footer btn-group" role="group" aria-label="Basic mixed styles example">
+                                <a href="https://www.youtube.com/watch?v=Da-CIlJU8I4&list=PLRW7iEDD9RDS2irjCFJo7dkcswBaJZXGG&ab_channel=BadBunny"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-danger btn-lg yt">Youtube</button></a>
+                                <a href="https://open.spotify.com/album/5lJqux7orBlA1QzyiBGti1?si=3Os_uRPHRDylaz6XPi2L6g"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-success btn-lg sp">Spotify</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flechas">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                </div>
+                <img class="section__image" src="../images/album-yhlqmdlg.jpg" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal3" alt="foto-album">
             </article>
             <article class="section__article">
-                <h3 class="section__title">Las que no iban a salir (May 2020)</h3>
+                <h3 class="section__title">Las que no iban a salir (May2020)</h3>
                 <ul class="section__lista">
                     <li class="section__item">Si ella sale</li>
                     <li class="section__item">Más de una cita (con Zion & Lennox)</li>
@@ -114,7 +206,37 @@
                     <li class="section__item">Ronca Freestyle</li>
                     <li class="section__item">En casita (featuring Gabriela)</li>
                 </ul>
-                <a href="https://www.youtube.com/watch?v=L88MenfjtTI&list=PLRW7iEDD9RDTnrFSzfd_WqMmtZK009MpS&ab_channel=BadBunny" target="_blank"><img class="section__image" src="../images/album-lasquenoibanasalir.jpg" alt="foto-album"></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Las que no iban a salir</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Donde quieres escuchar el disco?</h5>
+                            </div>
+                            <div class="modal-footer btn-group" role="group" aria-label="Basic mixed styles example">
+                                <a href="https://www.youtube.com/watch?v=L88MenfjtTI&list=PLRW7iEDD9RDTnrFSzfd_WqMmtZK009MpS&ab_channel=BadBunny"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-danger btn-lg yt">Youtube</button></a>
+                                <a href="https://open.spotify.com/album/4gvQO5mEuhbMSrLIuwXkmz?si=jN0bBWB8Q0-91gs6zHjR1w"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-success btn-lg sp">Spotify</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flechas">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                </div>
+                <img class="section__image" src="../images/album-lasquenoibanasalir.jpg" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal4" alt="foto-album">
             </article>
             <article class="section__article">
                 <h3 class="section__title">El último tour del mundo (Nov 2020)</h3>
@@ -136,18 +258,55 @@
                     <li class="section__item">Antes que se acabe</li>
                     <li class="section__item">Cantares de Navidad</li>
                 </ul>
-                <a href="https://www.youtube.com/watch?v=f5omY8jVrSM&list=PLRW7iEDD9RDQBBft2zmdpdcznIOyDw_n2&ab_channel=BadBunny" target="_blank"><img class="section__image" src="../images/album-elultimotourdelmundo.jpg" alt="foto-album"></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">El último tour del mundo</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Donde quieres escuchar el disco?</h5>
+                            </div>
+                            <div class="modal-footer btn-group" role="group" aria-label="Basic mixed styles example">
+                                <a href="https://www.youtube.com/watch?v=f5omY8jVrSM&list=PLRW7iEDD9RDQBBft2zmdpdcznIOyDw_n2&ab_channel=BadBunny"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-danger btn-lg yt">Youtube</button></a>
+                                <a href="https://open.spotify.com/album/2d9BCZeAAhiZWPpbX9aPCW?si=WD-X80xHQZ2yxQyHIXoxGQ"
+                                    target="_blank"><button type="button"
+                                        class="btn btn-outline-success btn-lg sp">Spotify</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flechas">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                    <img class="flechas__img" src="../images/flecha.png" alt="">
+                </div>
+                <img class="section__image" src="../images/album-elultimotourdelmundo.jpg" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal5" alt="foto-album">
             </article>
     </main>
     <footer class="footer footer--especial">
         <div class="footer__redes">
-            <a href="https://www.instagram.com/badbunnypr/" target="_blank"><i class="fab fa-instagram footer__redes__ig"></i></a>
-            <a href="https://twitter.com/sanbenito?lang=es" target="_blank"><i class="fab fa-twitter footer__redes__tw"></i></a>
-            <a href="https://www.youtube.com/results?search_query=bad+bunny" target="_blank"><i class="fab fa-youtube footer__redes__yt"></i></a>
-            <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank"><i class="fab fa-spotify footer__redes__spotify"></i></a>
+            <a href="https://www.instagram.com/badbunnypr/" target="_blank"><i
+                    class="fab fa-instagram footer__redes__ig"></i></a>
+            <a href="https://twitter.com/sanbenito?lang=es" target="_blank"><i
+                    class="fab fa-twitter footer__redes__tw"></i></a>
+            <a href="https://www.youtube.com/results?search_query=bad+bunny" target="_blank"><i
+                    class="fab fa-youtube footer__redes__yt"></i></a>
+            <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank"><i
+                    class="fab fa-spotify footer__redes__spotify"></i></a>
         </div>
         <h4 class="footer__creditos">Creditos: Guillermo Giamona 2022</h4>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
