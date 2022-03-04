@@ -1,0 +1,35 @@
+.card__titulo {
+    text-align: center;
+    background-color: rgb(128, 128, 128);
+}
+
+.card {
+    width: 35vh;
+    border: 5px solid $color__card !important;
+    background-color: rgba(0, 0, 0, 0.24);
+    margin: 2vh;
+    transition: all 1s;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 5px 5px 10px $card__borde;
+    }
+
+    .card__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: solid 2px $fondo__text;
+    }
+
+    .btn-card {
+        color: $text;
+        background-color: $color__card;
+        border-color: $card__borde;
+    }
+
+    .btn {
+        box-shadow: none !important;
+    }
+
+}
