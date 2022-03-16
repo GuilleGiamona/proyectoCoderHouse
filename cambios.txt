@@ -1,0 +1,74 @@
+Agregue la clase _redes.scss y la importe en style.scss: Pase todo lo relacionado con footer__redes a este nuevo archivo
+En el archivo redes.scss (SASS)
+Mapie mis redes, cada una con sus keys y sus valores:
+$redes:(
+    ig: blueviolet,
+    tw: darkturquoise,
+    yt: red,
+    spotify: green
+    );
+Realice un each para poder crear sus respectivas clases. Cree una clase de ajuste. Use el .extend para agregar la clase ajuste en las clases de redes:
+.ajuste{
+    transition: all 1s;
+    font-size: 4.5vh;
+    padding-right: 0.5vh;
+}
+
+@each $red, $color in $redes {
+    .footer__redes__#{$red} {
+        color: $color;
+        @extend .ajuste;
+    }
+}
+Realice un nuevo each para agregar las clases .hover a las redes:
+@each $red, $color in $redes {
+    &:hover.footer__redes__#{$red} {
+        transform: rotateY(720deg);
+    }
+}
+En el archivo style.scss (SASS)
+Cree un mixin para el width y el height:
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+Lo inclui en las clases ".main__section--p, .section__image, .main__section--form" (la idea es agregarlo en todos los lugares que se pueda implementar con el tiempo)
+Realice un mixin para flexbox (display, flex-direction, justify-content, align-items)
+@mixin flexbox($display, $flex, $justify, $aling) {
+    display: $display;
+    flex-direction: $flex;
+    justify-content: $justify;
+    align-items: $aling;
+}
+Lo inclui en las clases ".main__section--p, .main__section--info, .main_section--discos, .main__section--table, .main__section--form" (la idea es agregarlo en todos los lugares que se pueda implementar con el tiempo)
+.main__section--p {
+    grid-area: contenido;
+    @include sizes(auto, 100vh);
+    @include flexbox(flex, column, center, center);
+    background-image: url(../images/fondo.png);
+}
+Modificaciones en el SEO
+Modificaciones en index.html
+Cambie el title "Bad Bunny | Pagina Informativa"
+Agregue el meta de description "Toda las noticias, biografia, discos y demás de Bad Bunny esta aquí!"
+Agregue el meta de keywords "bad bunny, conejo malo, bad bunny noticias, fan page, noticias, redes, ultimas noticias"
+Agregue a mis imagenes sus respectivos alt "noticias"
+Modificaciones en contacto.html
+Cambie el title "Bad Bunny | Contacto"
+Agregue el meta de description "Contactate con nosotros y despeja cualquier duda que tengas!"
+Agregue el meta de keywords " bad bunny, contacto, dudas, mail, consultas, preguntas"
+Agregue el alt de la imagen "aside"
+Modificaciones en discos.html
+Cambie el title "Bad Bunny | Discografia"
+Agregue el meta de description "Toda la discografia de Bad Bunny. Todas sus canciones para poder escucharlas!"
+Agregue el meta de keywords "bad bunny, discos, discografia, canciones, temas, x 100pre, oasis, yhlqmdlg, las que no iban a salir, el último tour del mundo"
+Agregue el alt de la imagenes "flechas" y "foto-album"
+Modificaciones en informacion.html
+Cambie el title "Bad Bunny | Informacion"
+Agregue el meta de description "Bibliografia de Bad Bunny, su historia y todo lo que busques sobre él!"
+Agregue el meta de keywords "bad bunny, bibliografia, historia, vida, informacion, niño, joven"
+Agregue el alt de la imagenes "foto-badBunny"
+Modificaciones en tours.html
+Cambie el title "Bad Bunny | Tours"
+Agregue el meta de description "Todos los tours de Bad Bunny con sus fechas y lugares! Próximos también!"
+Agregue el meta de keywords "bad bunny, tour, concierto, recital, paises, fechas, lugares, show, escenario, estadio"

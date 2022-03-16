@@ -1,0 +1,29 @@
+$redes:(
+    ig: blueviolet,
+    tw: darkturquoise,
+    yt: red,
+    spotify: green
+    );
+
+.ajuste{
+    transition: all 1s;
+    font-size: 4.5vh;
+    padding-right: 0.5vh;
+}
+
+@each $red, $color in $redes {
+    .footer__redes__#{$red} {
+        color: $color;
+        @extend .ajuste;
+    }
+}
+
+@each $red, $color in $redes {
+    &:hover.footer__redes__#{$red} {
+        transform: rotateY(720deg);
+    }
+}
+
+.footer__redes {
+    margin-left: 2vh;
+}
