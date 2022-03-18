@@ -1,54 +1,10 @@
 .header {
     grid-area: encabezado;
 
-    .nav {
-        background-color: $color__nav;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: auto;
-
-        .nav__logo {
-            height: 60px;
-            width: 60px;
-            border-radius: 50px;
-            margin-left: 1.5vh;
-            margin-top: 0.5vh;
-        }
-
-        .nav__links {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-
-            .nav__item {
-                font-size: large;
-                width: auto;
-
-                .nav__link {
-                    text-decoration: none;
-                    margin-right: 1vh;
-                    padding: 1.5vh;
-                    color: blueviolet;
-                    transition: all 2s;
-
-                    &:hover {
-                        background-color: rgb(109, 109, 231);
-                        border-radius: 10px;
-                        color: $text;
-                    }
-                }
-            }
-        }
-    }
-
     .nav__boss {
         background-color: $color__nav;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
+        @include flexbox(flex, row, space-between, flex-end);
+
         height: auto;
         padding-top: 0.5vh;
         padding-bottom: 0.5vh;
@@ -73,16 +29,15 @@
                     text-decoration: none;
                     margin-right: 1vh;
                     padding: 1.5vh;
-                    color: blueviolet;
+                    color: $fondo__text;
                     transition: all 1s;
 
-                    @media screen and (min-width: 576px) {
-                        &:hover {
-                            background-color: rgb(109, 109, 231);
-                            border-radius: 10px;
-                            color: $text;
-                        }
+                    &:hover {
+                        background-color: #9569FD;
+                        border-radius: 10px;
+                        color: $text;
                     }
+
                 }
             }
         }

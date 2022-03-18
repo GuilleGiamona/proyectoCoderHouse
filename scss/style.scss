@@ -1,27 +1,14 @@
 @import "variables";
 @import "generales";
+@import "mixins";
 @import "grid";
 @import "header";
 @import "card";
+@import "tabla";
+@import "discos";
+@import "form";
+@import "footer";
 @import "redes";
-
-// MIXNIS
-
-@mixin sizes($width, $height) {
-    height: $height;
-    width: $width;
-}
-
-@mixin flexbox($display, $flex, $justify, $aling) {
-    display: $display;
-    flex-direction: $flex;
-    justify-content: $justify;
-    align-items: $aling;
-}
-
-// MIXNIS
-
-/* INDEX */
 
 .main__section--p {
     grid-area: contenido;
@@ -42,231 +29,23 @@
     color: $text;
 }
 
-/* INDEX */
-
-/* CARD */
-
-
-// /* Para eliminar el hover en vista mobile y tablet */
-
-// }
-/* CARD */
-
-/* INFORMACION */
-
-.main__section--info {
-    @include flexbox(flex, column, center, center);
-    grid-area: contenido;
-}
-
-.section__info {
-    width: 75%;
-}
-
 .section__p {
     font-weight: 700;
     text-align: center;
     padding: 10px;
+    margin-bottom: 0;
 }
 
-.section__contenedorImagenes {
-    display: flex;
-    flex-direction: row;
-}
-
-.section__contImg {
-    margin: 25px;
+.section__img--horizontal {
+    height: auto;
+    width: 100%;
+    border-radius: 5%;
 }
 
 .section__img {
     width: auto;
-    height: 250px;
-    border-radius: 25%;
-}
-
-/* INFORMACION */
-
-/* DISCOS */
-
-.main_section--discos {
-    @include flexbox(flex, row, space-around, center);
-    grid-area: contenido;
-}
-
-.section__article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 19%;
-    border: solid 2px blueviolet;
-    background-image: linear-gradient(to left, rgba(189, 97, 175, 0.87), rgb(255, 255, 255));
-}
-
-.section__title {
-    text-decoration: underline;
-    text-align: center;
-}
-
-.section__lista {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.section__image {
-    @include sizes(200px, auto);
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.section__item {
-    font-weight: 700;
-    padding: 5px;
-    text-align: center;
-}
-
-.modal-footer {
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.yt {
-    width: 440%;
-}
-
-.sp {
-    width: 490%;
-}
-
-.flechas {
-    display: flex;
-    margin: 10px;
-}
-
-.flechas__img {
-    margin-right: 10px;
-    margin-left: 10px;
-    animation-name: mi_animacion;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-    animation-delay: 0s;
-}
-
-@keyframes mi_animacion {
-    0% {}
-
-    /* 25% {
-        transform: translateY(-5px);
-
-    } */
-
-    50% {
-        transform: translateY(5px);
-
-    }
-
-    /* 75% {
-        transform: translateY(5px);
-
-    } */
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-/* DISCOS */
-
-/* TOURS */
-
-.main__section--table {
-    @include flexbox(flex, column, center, center);
-    background-image: url(../images/fondo.png);
-    background-repeat: repeat;
-    grid-area: contenido;
-}
-
-.section__table {
-    width: 80%;
-    border-collapse: collapse;
-    border: 4px solid gray;
-    background-color: rgb(197, 221, 231);
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.table__title {
-    width: 25%;
-    padding: 10px;
-    text-decoration: underline;
-    font-size: 20px;
-}
-
-.table__text {
-    padding: 10px;
-    font-weight: 500;
-}
-
-/* .table__tr:nth-child(odd) {
-    background-color: #db95ca;
-}
-
-.table__tr:nth-child(even) {
-    background-color:  rgb(197, 221, 231);
-} */
-
-/* TOURS */
-
-/* CONTACTO */
-
-.main__section--form {
-    @include sizes(100%, 100%);
-    @include flexbox(flex, column, center, center);
-    background-color: rgb(97, 97, 97);
-    padding-bottom: 5vh;
-}
-
-.grid-formularios {
-    grid-area: form;
-}
-
-.grid-aside {
-    grid-area: aside;
-}
-
-.form__area {
-    padding: 5%;
-    margin: 1vh;
-    background-color: rgba(51, 51, 51, 0.508);
-    border-radius: 10%;
-}
-
-.form__text {
-    color: white;
-    text-decoration: underline;
-    font-size: 150%;
-    vertical-align: top;
-}
-
-.form__input {
-    color: white;
-    border-radius: 10px;
-    font-size: 150%;
-    margin-top: 3%;
-    background-color: rgb(139, 138, 138);
-}
-
-.form__select {
-    font-size: 120%;
-}
-
-.aside {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    height: 80vh;
+    border-radius: 5%;
 }
 
 .aside__img {
@@ -275,29 +54,33 @@
     object-fit: cover;
 }
 
-/* CONTACTO */
-
-/* FOOTER */
-
-.footer {
-    background-color: rgb(160, 193, 209);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 8vh;
-    grid-area: footer;
-}
-
-.footer__creditos {
-    margin-right: 2vh;
-    font-weight: 700;
-    font-size: 25px;
-}
-
 /* LAPTOP */
 
 @media screen and (max-width: 768px) {
+
+    .nav__boss {
+        height: auto;
+        align-items: center !important;
+    }
+
+    .nav__links {
+        flex-direction: column !important;
+        list-style: none;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin-top: 5px;
+    }
+
+    .footer {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1rem;
+    }
 
     /* INDEX */
 
@@ -350,7 +133,7 @@
 
     .section__img {
         width: auto;
-        height: 200px;
+        height: 50vh;
     }
 
     /* INFORMACION */
@@ -422,23 +205,29 @@
 
 @media screen and (max-width: 576px) {
 
-    .nav {
-        height: auto;
-    }
 
     .nav__boss {
         height: auto;
-        align-items: center;
+        align-items: center !important;
     }
 
     .nav__links {
-        flex-direction: column;
+        flex-direction: column !important;
         list-style: none;
         align-items: center;
     }
 
     .nav__item {
         margin-top: 5px;
+    }
+
+    .footer {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1rem;
     }
 
     /* INDEX */
@@ -492,7 +281,7 @@
 
     .section__img {
         width: auto;
-        height: 150px;
+        height: 50vh;
     }
 
     /* INFORMACION */
@@ -573,17 +362,14 @@
 
 @media screen and (max-width: 480px) {
 
-    .nav {
-        height: auto;
-    }
-
     .nav__boss {
+        display: flex;
         height: auto;
-        align-items: center;
+        align-items: center !important;
     }
 
     .nav__links {
-        flex-direction: column;
+        flex-direction: column !important;
         list-style: none;
         align-items: center;
     }
@@ -598,6 +384,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        padding-top: 1rem;
     }
 
     /* INDEX */
@@ -628,13 +415,6 @@
         grid-template-rows: 1fr;
     }
 
-    .section__contenedorImagenes {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
     .main__title--info {
         font-size: x-large;
     }
@@ -643,13 +423,9 @@
         width: 95%;
     }
 
-    .section__contImg {
-        margin: 5px;
-    }
-
     .section__img {
         width: auto;
-        height: 150px;
+        height: 50vh;
     }
 
     /* INFORMACION */
@@ -664,12 +440,12 @@
 
     .main_section--discos {
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .section__article {
         align-items: center;
-        width: 85%;
+        width: 80% !important;
     }
 
     .yt {
@@ -726,5 +502,3 @@
 
     /* CONTACTO */
 }
-
-/* MOBILE */

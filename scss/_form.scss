@@ -1,0 +1,29 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form__area {
+        padding: 5%;
+        margin: 2vh;
+        background-color: rgba(51, 51, 51, 0.508);
+
+        .form__text {
+            color: white;
+            text-decoration: underline;
+            font-size: 150%;
+            vertical-align: top;
+        }
+
+        .form__input {
+            color: white;
+            border-radius: 10px;
+            font-size: 150%;
+            background-color: rgb(139, 138, 138);
+        }
+
+        .form__select {
+            font-size: 120%;
+        }
+    }
+}

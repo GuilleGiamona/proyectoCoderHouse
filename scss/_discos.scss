@@ -1,0 +1,68 @@
+.main_section--discos {
+    @include flexbox(flex, row, space-around, center);
+    grid-area: contenido;
+
+
+
+    .section__article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 19%;
+        border: solid 2px blueviolet;
+        background-image: linear-gradient(to left, #FE99C7, rgb(255, 255, 255));
+
+        .section__title {
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .section__lista {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .section__item {
+                font-weight: 700;
+                padding: 5px;
+                text-align: center;
+            }
+        }
+
+        .section__image {
+            @include sizes(200px, auto);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .modal-footer {
+            align-items: flex-start;
+            flex-direction: column;
+
+            .yt {
+                width: 440%;
+            }
+
+            .sp {
+                width: 490%;
+            }
+        }
+
+        .flechas {
+            display: flex;
+            margin: 10px;
+
+            .flechas__img {
+                margin-right: 10px;
+                margin-left: 10px;
+                animation-name: mi_animacion;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-duration: 1s;
+                animation-delay: 0s;
+            }
+        }
+    }
+}

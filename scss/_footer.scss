@@ -1,0 +1,16 @@
+.footer {
+    background-color: #C572FD;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    grid-area: footer;
+    margin-top: 0.5rem;
+}
+
+.footer__creditos {
+    margin-right: 2vh;
+    font-weight: 700;
+    font-size: 25px;
+}

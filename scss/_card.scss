@@ -1,6 +1,7 @@
 .card__titulo {
     text-align: center;
-    background-color: rgb(128, 128, 128);
+    background-color: $text;
+    color: $fondo__text;
 }
 
 .card {
