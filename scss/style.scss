@@ -11,7 +11,6 @@
 @import "redes";
 
 .main__section--p {
-    grid-area: contenido;
     @include sizes(auto, 100vh);
     @include flexbox(flex, column, center, center);
     background-image: url(../images/fondo.png);
@@ -84,12 +83,6 @@
 
     /* INDEX */
 
-    .grid-index {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
     .main__section--p {
         text-align: center;
     }
@@ -109,12 +102,6 @@
     /* INDEX */
 
     /* INFORMACION */
-
-    .grid-info {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     .section__contenedorImagenes {
         display: flex;
@@ -140,12 +127,6 @@
 
     /* DISCOS */
 
-    .grid-discos {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
     .main_section--discos {
         display: flex;
         flex-direction: row;
@@ -168,12 +149,6 @@
 
     /* TOURS */
 
-    .grid-tours {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
     .main__section--table {
         display: flex;
     }
@@ -185,12 +160,6 @@
     /* TOURS */
 
     /* CONTACTO */
-
-    .grid-contacto {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     .main__section--form {
         height: 100%;
@@ -232,12 +201,6 @@
 
     /* INDEX */
 
-    .grid-index {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
     .main__section--p {
         text-align: center;
     }
@@ -257,12 +220,6 @@
     /* INDEX */
 
     /* INFORMACION */
-
-    .grid-info {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     .section__contenedorImagenes {
         display: flex;
@@ -287,12 +244,6 @@
     /* INFORMACION */
 
     /* DISCOS */
-
-    .grid-discos {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     .main_section--discos {
         display: flex;
@@ -324,12 +275,6 @@
 
     /* TOURS */
 
-    .grid-tours {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
     .main__section--table {
         display: flex;
     }
@@ -341,12 +286,6 @@
     /* TOURS */
 
     /* CONTACTO */
-
-    .grid-contacto {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     .main__section--form {
         height: auto;
@@ -389,13 +328,6 @@
 
     /* INDEX */
 
-    .grid-index {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-
     .contenido {
         flex-direction: column;
         text-align: center;
@@ -408,12 +340,6 @@
     /* INDEX */
 
     /* INFORMACION */
-
-    .grid-info {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     .main__title--info {
         font-size: x-large;
@@ -431,12 +357,6 @@
     /* INFORMACION */
 
     /* DISCOS */
-
-    .grid-discos {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     .main_section--discos {
         display: flex;
@@ -459,12 +379,6 @@
     /* DISCOS */
 
     /* TOURS */
-
-    .grid-tours {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     .main__section--table {
         display: flex;
@@ -489,12 +403,6 @@
     /* TOURS */
 
     /* CONTACTO */
-
-    .grid-contacto {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     .main__section--form {
         height: auto;

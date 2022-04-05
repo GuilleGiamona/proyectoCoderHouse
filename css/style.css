@@ -7,72 +7,70 @@ body {
   font-family: 'IBM Plex Sans', sans-serif !important;
   background-color: #A4B4FD; }
 
-.grid-index {
-  display: grid;
-  grid-template-areas: "encabezado" "contenido" "footer";
-  grid-template-columns: 100%;
-  grid-template-rows: auto 1fr auto; }
-
-.grid-contacto {
-  height: 100vh;
+.img-grid, .gridResponsive .gridResponsive__caja--1, .gridResponsive .gridResponsive__caja--2, .gridResponsive .gridResponsive__caja--3, .gridResponsive .gridResponsive__caja--4, .gridResponsive .gridResponsive__caja--5, .gridResponsive .gridResponsive__caja--6 {
   width: 100%;
-  display: grid;
-  grid-template-areas: "encabezado encabezado" "aside form" "footer footer";
-  grid-template-columns: 25% 75%;
-  grid-template-rows: 8% auto 6%;
-  justify-content: center; }
+  height: 100%;
+  object-fit: cover; }
 
-.grid-info {
+.gridResponsive {
+  height: 500px;
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid white;
   display: grid;
-  grid-template-areas: "encabezado" "contenido" "footer";
-  grid-template-columns: 100%;
-  grid-template-rows: auto 1fr auto; }
+  grid-template-areas: "caja-1 caja-1 caja-5 caja-2" "caja-1 caja-1 caja-5 caja-2" "caja-1 caja-1 caja-6 caja-6" "caja-3 caja-4 caja-6 caja-6";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 4fr 2fr 2fr 4fr; }
+  .gridResponsive .gridResponsive__caja {
+    font-size: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white; }
+  .gridResponsive .gridResponsive__caja--1 {
+    grid-area: caja-1; }
+  .gridResponsive .gridResponsive__caja--2 {
+    grid-area: caja-2; }
+  .gridResponsive .gridResponsive__caja--3 {
+    grid-area: caja-3; }
+  .gridResponsive .gridResponsive__caja--4 {
+    grid-area: caja-4; }
+  .gridResponsive .gridResponsive__caja--5 {
+    grid-area: caja-5; }
+  .gridResponsive .gridResponsive__caja--6 {
+    grid-area: caja-6; }
 
-.grid-discos {
-  display: grid;
-  grid-template-areas: "encabezado" "contenido" "footer";
-  grid-template-columns: 100%;
-  grid-template-rows: auto 1fr auto; }
-
-.grid-tours {
-  display: grid;
-  grid-template-areas: "encabezado" "contenido" "footer";
-  grid-template-columns: 100%;
-  grid-template-rows: auto 1fr auto; }
-
-.header {
-  grid-area: encabezado; }
-  .header .nav__boss {
-    background-color: #C572FD;
+.header .nav__boss {
+  background-color: #C572FD;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: auto;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh; }
+  .header .nav__boss .nav__logo--boss {
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-left: 1.5vh; }
+  .header .nav__boss .nav__links {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: auto;
-    padding-top: 0.5vh;
-    padding-bottom: 0.5vh; }
-    .header .nav__boss .nav__logo--boss {
-      height: 60px;
-      width: 60px;
-      border-radius: 50px;
-      margin-left: 1.5vh; }
-    .header .nav__boss .nav__links {
-      display: flex;
-      flex-direction: row;
-      list-style: none; }
-      .header .nav__boss .nav__links .nav__item {
-        font-size: large;
-        width: auto; }
-        .header .nav__boss .nav__links .nav__item .nav__link {
-          text-decoration: none;
-          margin-right: 1vh;
-          padding: 1.5vh;
-          color: black;
-          transition: all 1s; }
-          .header .nav__boss .nav__links .nav__item .nav__link:hover {
-            background-color: #9569FD;
-            border-radius: 10px;
-            color: white; }
+    list-style: none; }
+    .header .nav__boss .nav__links .nav__item {
+      font-size: large;
+      width: auto; }
+      .header .nav__boss .nav__links .nav__item .nav__link {
+        text-decoration: none;
+        margin-right: 1vh;
+        padding: 1.5vh;
+        color: black;
+        transition: all 1s; }
+        .header .nav__boss .nav__links .nav__item .nav__link:hover {
+          background-color: #9569FD;
+          border-radius: 10px;
+          color: white; }
 
 .card__titulo {
   text-align: center;
@@ -135,8 +133,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  grid-area: contenido; }
+  align-items: center; }
   .main_section--discos .section__article {
     display: flex;
     flex-direction: column;
@@ -209,7 +206,6 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 8vh;
-  grid-area: footer;
   margin-top: 0.5rem; }
 
 .footer__creditos {
@@ -250,7 +246,6 @@ body {
   margin-left: 2vh; }
 
 .main__section--p {
-  grid-area: contenido;
   height: 100vh;
   width: auto;
   display: flex;
@@ -309,10 +304,6 @@ body {
     align-items: center;
     padding-top: 1rem; }
   /* INDEX */
-  .grid-index {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main__section--p {
     text-align: center; }
   .main__section--c {
@@ -325,10 +316,6 @@ body {
     width: 30vh; }
   /* INDEX */
   /* INFORMACION */
-  .grid-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .section__contenedorImagenes {
     display: flex;
     flex-direction: row;
@@ -343,10 +330,6 @@ body {
     height: 50vh; }
   /* INFORMACION */
   /* DISCOS */
-  .grid-discos {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main_section--discos {
     display: flex;
     flex-direction: row;
@@ -361,20 +344,12 @@ body {
     padding-top: 10px; }
   /* DISCOS */
   /* TOURS */
-  .grid-tours {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main__section--table {
     display: flex; }
   .section__table {
     width: 90%; }
   /* TOURS */
   /* CONTACTO */
-  .grid-contacto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main__section--form {
     height: 100%; }
   /* CONTACTO */ }
@@ -399,10 +374,6 @@ body {
     align-items: center;
     padding-top: 1rem; }
   /* INDEX */
-  .grid-index {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main__section--p {
     text-align: center; }
   .main__section--c {
@@ -415,10 +386,6 @@ body {
     width: 35vh; }
   /* INDEX */
   /* INFORMACION */
-  .grid-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .section__contenedorImagenes {
     display: flex;
     flex-direction: row;
@@ -433,10 +400,6 @@ body {
     height: 50vh; }
   /* INFORMACION */
   /* DISCOS */
-  .grid-discos {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main_section--discos {
     display: flex;
     flex-direction: row;
@@ -455,20 +418,12 @@ body {
     width: 532%; }
   /* DISCOS */
   /* TOURS */
-  .grid-tours {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main__section--table {
     display: flex; }
   .section__table {
     width: 90%; }
   /* TOURS */
   /* CONTACTO */
-  .grid-contacto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main__section--form {
     height: auto; }
   /* CONTACTO */ }
@@ -494,10 +449,6 @@ body {
     align-items: center;
     padding-top: 1rem; }
   /* INDEX */
-  .grid-index {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .contenido {
     flex-direction: column;
     text-align: center; }
@@ -505,10 +456,6 @@ body {
     width: 45vh; }
   /* INDEX */
   /* INFORMACION */
-  .grid-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main__title--info {
     font-size: x-large; }
   .section__info {
@@ -518,10 +465,6 @@ body {
     height: 50vh; }
   /* INFORMACION */
   /* DISCOS */
-  .grid-discos {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main_section--discos {
     display: flex;
     flex-direction: column !important; }
@@ -534,10 +477,6 @@ body {
     width: 443%; }
   /* DISCOS */
   /* TOURS */
-  .grid-tours {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main__section--table {
     display: flex; }
   .section__table {
@@ -552,10 +491,6 @@ body {
     text-align: center; }
   /* TOURS */
   /* CONTACTO */
-  .grid-contacto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; }
   .main__section--form {
     height: auto; }
   /* CONTACTO */ }
