@@ -259,7 +259,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/fondo.png); }
+  background-image: url(../images/fondo.png);
+  background-attachment: fixed; }
 
 .main__title {
   background-color: black;

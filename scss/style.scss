@@ -14,6 +14,7 @@
     @include sizes(auto, 100vh);
     @include flexbox(flex, column, center, center);
     background-image: url(../images/fondo.png);
+    background-attachment: fixed;
 }
 
 .main__title {
