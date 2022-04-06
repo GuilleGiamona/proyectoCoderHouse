@@ -178,6 +178,13 @@ body {
         animation-duration: 1s;
         animation-delay: 0s; }
 
+@keyframes mi_animacion {
+  0% { }
+  50% {
+    transform: translateY(5px); }
+  100% {
+    transform: translateY(0px); } }
+
 .form {
   display: flex;
   align-items: center;
